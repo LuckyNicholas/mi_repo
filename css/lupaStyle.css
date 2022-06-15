@@ -90,16 +90,16 @@
         transform: scale(1.2);
     }
 
-    .grid
+    .container-fluid
     {
         margin: 0;
         top: 0;
         height: 100%;
         width: 100%;
         margin-top: 700px;
-        display: grid;  
-        grid-template-rows: repeat(2, 10% 40%);
+ 
     }
+    
 
     h2
     {
@@ -169,22 +169,17 @@
     {
         margin: 0;
         padding: 0;
-        width: 100%;
         text-align: center;
-        list-style: none;
         background-color: #fff;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: flex-start;
+        
     }
 
     .cajaObra
     {
         margin: 0;
         display: inline-block;
-        width: 30%;
-     
+        height: 500px;
+        height: auto;
     }
 
     .cajaObra img:hover
