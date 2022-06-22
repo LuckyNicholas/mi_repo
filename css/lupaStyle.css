@@ -35,8 +35,7 @@ a {
 
 header {
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fdf2d4), to(transparent));
-  background: linear-gradient(to bottom, #fdf2d4, transparent);
+  background: #fdf2d4;
   height: 130px;
   text-align: center;
   position: fixed;
@@ -66,7 +65,7 @@ nav {
   width: 75%;
   list-style: none;
   display: inline-block;
-  padding-bottom: 10px;
+  padding-bottom: 2rem;
 }
 
 #menu li {
@@ -89,41 +88,21 @@ nav {
   height: 100%;
   width: 100%;
   margin-top: 700px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 h2 {
   margin: 0;
-  padding-bottom: 50px;
-  padding-top: 30px;
-  padding-left: 30px;
+  padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-left: 3rem;
   font-weight: 300;
   font-style: italic;
   background: -webkit-gradient(linear, left top, left bottom, from(#fdf2d4), to(transparent));
   background: linear-gradient(to bottom, #fdf2d4, transparent);
   font-size: 2.5em;
-  margin-left: 3%;
-}
-
-h3 {
-  margin: 0;
-  padding-bottom: 50px;
-  padding-top: 30px;
-  padding-left: 30px;
-  font-weight: 300;
-  font-style: italic;
-  font-size: 2.5em;
-  margin-left: 3%;
-}
-
-.textContainer {
-  margin: 0;
-  width: 90%;
-}
-
-p {
-  padding-left: 30px;
-  width: 90%;
-  font-size: 1em;
+  margin-left: 2rem;
 }
 
 .first {
@@ -142,10 +121,10 @@ section {
 }
 
 .third {
-  padding-top: 100px;
-  padding-left: 200px;
+  padding-top: 10rem;
+  padding-left: 10rem;
   background-color: #fdf2d4;
-  height: 600px;
+  height: 100vh;
 }
 
 .cajaObrasss {
@@ -169,7 +148,7 @@ section {
 }
 
 .cajaObra img:hover {
-  opacity: .7;
+  opacity: 1;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-filter: invert(1);
@@ -178,41 +157,24 @@ section {
           transform: translateY(-30px);
 }
 
-.nombreCategoria {
-  background-color: #fdf2d4;
-}
-
-.nombreObra {
-  margin-top: 0;
+.cajaObra .nombreObra {
+  margin-top: 2rem;
   font-weight: 500;
   font-size: 2em;
   text-align: left;
   font-style: italic;
   margin-bottom: 0;
-  margin-left: 5%;
+  margin-left: 2rem;
 }
 
-.artistaObra {
+.cajaObra .artistaObra {
   text-align: left;
   margin-top: 0;
-  margin-left: 5%;
+  margin-left: 2rem;
 }
 
-form {
-  margin-left: 20%;
-  width: 60%;
-}
-
-fieldset {
-  border: none;
-}
-
-.textoForm {
-  font-family: 'open sans', sans-serif;
-  font-size: 1.5em;
-  margin: 10px;
-  height: 30px;
-  display: block;
+.nombreCategoria {
+  background-color: #fdf2d4;
 }
 
 .inputBox {
@@ -259,17 +221,17 @@ h5 {
   margin: 0;
   padding: 0;
   font-size: 2em;
-  margin: 30px;
+  margin-bottom: 2rem;
 }
 
 h6 {
   margin: 0;
-  padding-bottom: 50px;
-  padding-left: 30px;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
   font-weight: 300;
   font-style: italic;
   font-size: 2.5em;
-  margin-left: 20%;
+  margin-left: 20rem;
 }
 
 .producto {
@@ -284,6 +246,63 @@ h6 {
   padding: 0;
   display: inline-block;
   height: 500px;
+}
+
+.gridServicios {
+  width: 100%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 40%;
+      grid-template-columns: 40% 40%;
+  -ms-grid-rows: auto 700px;
+      grid-template-rows: auto 700px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #fdf2d4;
+  padding-top: 160px;
+      grid-template-areas: "titulo titulo" "imagen texto";
+}
+
+.gridServicios .titleServicios {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: titulo;
+  width: 100%;
+  text-align: left;
+  margin-left: 5%;
+}
+
+.gridServicios .titleServicios h3 {
+  margin: 0;
+  padding-bottom: 50px;
+  padding-top: 30px;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 2.5em;
+}
+
+.gridServicios .textContainer {
+  margin-left: 5%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: texto;
+}
+
+.gridServicios .textContainer p {
+  margin: 0;
+}
+
+.gridServicios .imgDetalle {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: imagen;
+}
+
+.gridServicios .imgDetalle img {
+  width: 100%;
 }
 
 .fotoProducto {
@@ -315,7 +334,26 @@ footer {
   background-color: black;
 }
 
-@media screen and (max-width: 500px) {
+form {
+  width: 100%;
+}
+
+.form-label {
+  font-size: 1em;
+  font-family: 'open sans', sans-serif;
+  font-weight: 100;
+  color: gray;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #4eaafa;
+}
+
+@media screen and (max-width: 600px) {
   .cajaObra {
     width: 100%;
   }
@@ -323,6 +361,16 @@ footer {
     height: auto;
     -ms-grid-rows: (5% 45%)[2];
         grid-template-rows: repeat(2, 5% 45%);
+  }
+  .gridServicios {
+    -ms-grid-columns: 1;
+        grid-template-columns: 1;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "titulo titulo" "imagen imagen" "texto texto";
+  }
+  .gridServicios .imgDetalle {
+    margin-bottom: 3rem;
   }
   .cajaObrasss {
     height: auto;
