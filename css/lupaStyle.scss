@@ -26,71 +26,90 @@
         margin: 0;
         padding: 0;
         font-family: 'open sans', sans-serif;
-        background-image: url("../img/Web Banner GRANDE 3.png");
+        background-image: url("../img/backkk.gif");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
+        background-color: $colorPrimario;
     }
 
     a
     {
         text-decoration: none;
-        color: #000;
+        color: $colorTexto;
     }
 
     header
     {
         width: 100%;
-        background: $colorPrimario;
-        height: 130px;
+        height: 16vh;
         text-align: center;
         position: fixed;
         top: 0;
         z-index: 999;
-    }
-
-    h1
-    {
-        margin: 0;
-        padding: 0;
-        font-weight: 400;
-        font-size: 3em;
-        color: #000;
-    }
-
-    nav
-    {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        color: $colorTexto;
-        text-align: center;      
-    }
-
-    #menu
-    {
-        margin: 0;
-        padding: 20px;
-        width: 75%;
-        list-style: none;
-        display: inline-block;
-        padding-bottom: 2rem;
-    }
-
-    #menu li
-    {
-        width: 100px;
-        display: inline-block;
-    }
-
-    #menu li:hover
-    {
+         
         
-        top: 10px;
-        font-weight: 700;
-        transition: .3s;
-        transform: scale(1.2);
     }
+        
+    
+        nav
+        {
+            margin: 0;
+            padding: 0;
+            height: 30vh;
+            width: 100%;
+            color: $colorTexto;
+            text-align: center;
+            background: linear-gradient(to bottom, $colorPrimario,transparent);
+
+            #menu
+            {
+                margin: 0;
+                margin-left: 50px;
+                padding-top: 50px;
+                width: 100%;
+                list-style: none;
+                padding-bottom: 2rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: baseline;
+                padding-left: 0;
+        
+
+                .marca {
+    
+                    text-align: left;
+            
+                    h1 {   
+                        margin: 0;
+                        padding: 0;
+                        font-weight: 400;
+                        font-size: 2em;
+                        color: $colorTexto;
+                        text-align: center;
+                    }
+                }
+                
+        
+                li{
+                    width: 120px;
+                    display: inline-block;
+                    color: $colorTexto;
+                    font-size: 1em;
+
+                    &:hover{
+                        top: 10px;
+                        font-weight: 700;
+                        transition: .3s;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+           
+        }
+    
+    
 
     .container-fluid
     {
@@ -104,18 +123,7 @@
     }
     
 
-    h2
-    {
-        margin: 0;
-        padding-bottom: 1rem;
-        padding-top: 3rem;
-        padding-left: 3rem;
-        font-weight: 300;
-        font-style: italic;
-        background: linear-gradient(to bottom, $colorPrimario,transparent);
-        font-size: 2.5em;
-        margin-left: 2rem;
-    }
+    
 
     .first
     {
@@ -167,34 +175,55 @@
             {
                 opacity: 1;
                 transition: .5s;
-                filter: invert(1);
+                filter: grayscale(75%);
                 transform: translateY(-30px);
             }
         }
 
+        .etiquetaObra {
+
+            color: $colorTexto;
+            margin-bottom: 3rem;
+            margin-top: 1rem;
+
             .nombreObra
             {
-            margin-top: 2rem;
-            font-weight: 500;
-            font-size: 2em;
+            font-weight: 100;
+            font-size: 1.5em;
             text-align: left;
-            font-style: italic;
             margin-bottom: 0;
             margin-left: 2rem;
+            font-family: 'open sans';
+            line-height: 1.2;
             }
 
-            .artistaObra
-            {
-            text-align: left;
-            margin-top: 0;
-            margin-left: 2rem;
+            span {
+
+                @extend .nombreObra
+                margin-top: 0;
+                font-style: italic;
+                font-family: "praho";
             }
+        
+        }
+            
 
     }
 
-    .nombreCategoria
-    {
+    .nombreCategoria {
         background-color: $colorPrimario;
+
+        h2 {
+            margin: 0;
+            padding-bottom: 1rem;
+            padding-top: 3rem;
+            padding-left: 3rem;
+            font-weight: 300;
+            font-style: italic;
+            background: linear-gradient(to bottom, $colorPrimario,transparent);
+            font-size: 1.5em;
+            width: 80%;
+        }
     }
 
 
@@ -246,6 +275,8 @@
         padding: 0;
         font-size: 2em;
         margin-bottom: 2rem;
+        font-family: 'open sans', sans-serif;
+        font-weight: 300;
     }
 
     h6
@@ -383,6 +414,26 @@
     
 
     @media screen and (max-width: 600px) {
+
+    nav
+    {
+        #menu
+        {
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: center;
+            margin-left: 0;
+            align-items: center;
+
+
+            li
+            {
+                width: 100%;
+                height: 5vh;
+            }
+        }
+    }
+    
 
     .cajaObra
     {

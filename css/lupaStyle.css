@@ -9,23 +9,24 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #fdf2d4;
+  background: #fff3e8;
   border-radius: 3.5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #fdf2d4;
+  background: #fff3e8;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'open sans', sans-serif;
-  background-image: url("../img/Web Banner GRANDE 3.png");
+  background-image: url("../img/backkk.gif");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  background-color: #fff3e8;
 }
 
 a {
@@ -35,51 +36,74 @@ a {
 
 header {
   width: 100%;
-  background: #fdf2d4;
-  height: 130px;
+  height: 16vh;
   text-align: center;
   position: fixed;
   top: 0;
   z-index: 999;
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
-  font-weight: 400;
-  font-size: 3em;
-  color: #000;
-}
-
 nav {
   margin: 0;
   padding: 0;
+  height: 30vh;
   width: 100%;
+  color: #000;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff3e8), to(transparent));
+  background: linear-gradient(to bottom, #fff3e8, transparent);
+}
+
+nav #menu {
+  margin: 0;
+  margin-left: 50px;
+  padding-top: 50px;
+  width: 100%;
+  list-style: none;
+  padding-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding-left: 0;
+}
+
+nav #menu .marca {
+  text-align: left;
+}
+
+nav #menu .marca h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 2em;
   color: #000;
   text-align: center;
 }
 
-#menu {
-  margin: 0;
-  padding: 20px;
-  width: 75%;
-  list-style: none;
+nav #menu li {
+  width: 120px;
   display: inline-block;
-  padding-bottom: 2rem;
+  color: #000;
+  font-size: 1em;
 }
 
-#menu li {
-  width: 100px;
-  display: inline-block;
-}
-
-#menu li:hover {
+nav #menu li:hover {
   top: 10px;
   font-weight: 700;
   -webkit-transition: .3s;
   transition: .3s;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .container-fluid {
@@ -90,19 +114,6 @@ nav {
   margin-top: 700px;
   padding-right: 0;
   padding-left: 0;
-}
-
-h2 {
-  margin: 0;
-  padding-bottom: 1rem;
-  padding-top: 3rem;
-  padding-left: 3rem;
-  font-weight: 300;
-  font-style: italic;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fdf2d4), to(transparent));
-  background: linear-gradient(to bottom, #fdf2d4, transparent);
-  font-size: 2.5em;
-  margin-left: 2rem;
 }
 
 .first {
@@ -117,13 +128,13 @@ section {
 }
 
 .second {
-  background-color: #fdf2d4;
+  background-color: #fff3e8;
 }
 
 .third {
   padding-top: 10rem;
   padding-left: 10rem;
-  background-color: #fdf2d4;
+  background-color: #fff3e8;
   height: 100vh;
 }
 
@@ -131,7 +142,7 @@ section {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #fdf2d4;
+  background-color: #fff3e8;
 }
 
 .cajaObra {
@@ -151,30 +162,53 @@ section {
   opacity: 1;
   -webkit-transition: .5s;
   transition: .5s;
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  -webkit-filter: grayscale(75%);
+          filter: grayscale(75%);
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
 }
 
-.cajaObra .nombreObra {
-  margin-top: 2rem;
-  font-weight: 500;
-  font-size: 2em;
-  text-align: left;
-  font-style: italic;
-  margin-bottom: 0;
-  margin-left: 2rem;
+.cajaObra .etiquetaObra {
+  color: #000;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
 }
 
-.cajaObra .artistaObra {
+.cajaObra .etiquetaObra .nombreObra {
+  font-weight: 100;
+  font-size: 1.5em;
+  text-align: left;
+  margin-bottom: 0;
+  margin-left: 2rem;
+  font-family: 'open sans';
+  line-height: 1.2;
+}
+
+.cajaObra .etiquetaObra .nombreObra span {
   text-align: left;
   margin-top: 0;
-  margin-left: 2rem;
+  font-weight: 100;
+  font-style: italic;
+  font-family: "praho";
+  font-size: 1.5rem;
+  text-align: left;
 }
 
 .nombreCategoria {
-  background-color: #fdf2d4;
+  background-color: #fff3e8;
+}
+
+.nombreCategoria h2 {
+  margin: 0;
+  padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  font-weight: 300;
+  font-style: italic;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff3e8), to(transparent));
+  background: linear-gradient(to bottom, #fff3e8, transparent);
+  font-size: 1.5em;
+  width: 80%;
 }
 
 .inputBox {
@@ -213,7 +247,7 @@ section {
 h4 {
   margin: 0;
   padding-top: 30px;
-  color: #fdf2d4;
+  color: #fff3e8;
   font-weight: 400;
 }
 
@@ -222,6 +256,8 @@ h5 {
   padding: 0;
   font-size: 2em;
   margin-bottom: 2rem;
+  font-family: 'open sans', sans-serif;
+  font-weight: 300;
 }
 
 h6 {
@@ -238,7 +274,7 @@ h6 {
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #fdf2d4;
+  background-color: #fff3e8;
 }
 
 .producto li {
@@ -260,7 +296,7 @@ h6 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #fdf2d4;
+  background-color: #fff3e8;
   padding-top: 160px;
       grid-template-areas: "titulo titulo" "imagen texto";
 }
@@ -320,7 +356,7 @@ h6 {
   margin: 0 auto;
   padding: 0;
   width: 45%;
-  background-color: #fdf2d4;
+  background-color: #fff3e8;
   display: inline;
   position: absolute;
 }
@@ -354,6 +390,24 @@ form {
 }
 
 @media screen and (max-width: 600px) {
+  nav #menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    text-align: center;
+    margin-left: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav #menu li {
+    width: 100%;
+    height: 5vh;
+  }
   .cajaObra {
     width: 100%;
   }
